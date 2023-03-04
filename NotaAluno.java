@@ -1,56 +1,44 @@
 import java.util.Scanner;
 public class NotaAluno {
 
-    String nome, matricula;
+    public NotaAluno() {
+    }
 
-    double av1, av2, avAE, nota, media;
+    public static void main(String[] args) {
 
-    String curso;
+        String nome, matricula;
 
-    int periodo;
+        int av1, av2, avAE , nota, media, mediaAluno;
 
-    Scanner ler = new Scanner(System.in);
+        String curso;
 
-    NotaAluno(String nome, String matricula, double av1, double av2, double avAE, double nota, String curso, int periodo) {
-        this.nome = nome;
-        this.matricula = matricula;
-        this.av1 = av1;
-        this.av2 = av2;
-        this.avAE = avAE;
-        this.nota = nota;
-        this.curso = curso;
-        this.periodo = periodo;
+        int periodo;
 
+        Scanner ler= new Scanner(System.in);
+
+
+        System.out.println("Insira o número de matricula: ");
+        matricula = ler.next();
         System.out.println("Insira o valor da nota av1: ");
-        av1 = ler.nextDouble();
-        System.out.println("Insira o valor da nota an2: ");
-        av2 = ler.nextDouble();
+        av1 = ler.nextInt();
+        System.out.println("Insira o valor da nota av2: ");
+        av2 = ler.nextInt();
 
-        media = (av1 + av2) / 2;
+        nota = (av1 + av2);
 
-        System.out.println("Sua media é: " + media);
+        System.out.println("Sua nota é: " + nota);
 
-
-        if (media >= 60) {
+        if (nota >= 60) {
             System.out.println("Aluno aprovado! Parabéns :)");
 
-        } else {
+        } else if (nota<60) {
+
             System.out.println("Aluno em recuperação . :(");
 
 
         }
-
-        System.out.println("Reprovado");
-        media = ler.nextDouble();
-
-        media = (media + avAE) / 2;
-
-        if (media >= 60) {
-            System.out.println("Aluno aprovado! Parabéns :)");
-        } else {
-            System.out.println("Aluno Reprovado. :(");
-
-        }
+        
     }
+
 }
 
