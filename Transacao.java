@@ -10,6 +10,9 @@ public class Transacao {
 
         System.out.println("Digite o valor do veiculo: ");
         valor= ler.nextDouble();
+        
+        System.out.println("Digite a forma de pagamento: ");
+        formaDePagamento = ler.nextDouble();
 
         System.out.println("Informe o cpf desejado:  ");
         cpf = ler.next();
