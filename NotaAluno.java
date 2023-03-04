@@ -8,7 +8,7 @@ public class NotaAluno {
 
         String nome, matricula;
 
-        int av1, av2, avAE , nota, media, mediaAluno;
+        int av1, av2, avAE , nota, media, mediaAluno,notaFinal;
 
         String curso;
 
@@ -33,12 +33,28 @@ public class NotaAluno {
 
         } else if (nota<60) {
 
-            System.out.println("Aluno em recuperação . :(");
+
+            System.out.println("Aluno em recuperação. Realizer a avAE . :(");
+
+            System.out.println("Insira a nota avAE");
+            avAE= ler.nextInt();
+
+            notaFinal=(av1+av2+avAE)/2;
+
+            System.out.println("Sua nota final é: "+ notaFinal);
+
+            if (notaFinal >= 60) {
+                System.out.println("Aluno aprovado! Parabéns :)");
+
+            } else if (notaFinal<60) {
+                System.out.println("Você esta reprovado : (");
+            }
+
+
 
 
         }
-        
+
     }
 
 }
-
