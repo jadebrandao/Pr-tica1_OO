@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Transacao {
     public static void main(String[] args) {
         Double valor;
-        double formaDePagamento;
+        String formaDePagamento;
         String cpf;
         String nome;
 
@@ -12,7 +12,7 @@ public class Transacao {
         valor= ler.nextDouble();
         
         System.out.println("Digite a forma de pagamento: ");
-        formaDePagamento = ler.nextDouble();
+        formaDePagamento = ler.next();
 
         System.out.println("Informe o cpf desejado:  ");
         cpf = ler.next();
